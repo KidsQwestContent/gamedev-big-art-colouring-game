@@ -3853,11 +3853,13 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Exps.AnimationFrame,
 		C3.Plugins.DrawingCanvas.Exps.X,
 		C3.Plugins.DrawingCanvas.Exps.Y,
+		C3.Plugins.System.Acts.SetLayerVisible,
 		C3.Plugins.Sprite.Acts.SetAnimFrame,
 		C3.Plugins.Sprite.Acts.SetInstanceVar,
 		C3.Plugins.Sprite.Exps.Y,
 		C3.Plugins.Sprite.Cnds.IsAnimPlaying,
 		C3.Plugins.Sprite.Acts.Destroy,
+		C3.Plugins.System.Cnds.LayerVisible,
 		C3.Plugins.Sprite.Cnds.IsBoolInstanceVarSet,
 		C3.Plugins.Sprite.Cnds.CompareFrame,
 		C3.Plugins.System.Cnds.Else,
@@ -3917,6 +3919,9 @@ self.C3_JsPropNameTable = [
 	{image_loader: 0},
 	{Browser: 0},
 	{chicken_parts: 0},
+	{panel_instruction: 0},
+	{button_ok: 0},
+	{button_instruction: 0},
 	{rooster: 0},
 	{radius: 0},
 	{offX: 0},
@@ -4031,6 +4036,8 @@ self.C3_ExpressionFuncs = [
 			return () => n0.ExpObject();
 		},
 		() => "none",
+		() => "POP",
+		() => "GAME",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => v0.GetValue();
