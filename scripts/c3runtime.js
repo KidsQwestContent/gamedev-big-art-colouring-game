@@ -3922,6 +3922,8 @@ self.C3_JsPropNameTable = [
 	{panel_instruction: 0},
 	{button_ok: 0},
 	{button_instruction: 0},
+	{button_close: 0},
+	{mask: 0},
 	{rooster: 0},
 	{radius: 0},
 	{offX: 0},
@@ -4037,7 +4039,6 @@ self.C3_ExpressionFuncs = [
 		},
 		() => "none",
 		() => "POP",
-		() => "GAME",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => v0.GetValue();
